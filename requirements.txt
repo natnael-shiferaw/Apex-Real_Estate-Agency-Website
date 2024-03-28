@@ -1,6 +1,0 @@
-Flask
-flask-wtf
-flask-sqlalchemy
-sqlalchemy
-pymsql
-WTForms
