@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- Hero section -->
+  <div id="carouselExampleAutoplaying" class="carousel slide unique-carousel">
+    <div class="carousel-inner unique-carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://ideogram.ai/api/images/direct/WmaEFLspS5ukWGrKE4LmRQ.jpg" class="d-block w-100-height unique-carousel-image" alt="image">
+        <div class="carousel-caption carousell unique-carousel-caption ">
+
+          <h5 class="text-center">Property</h5>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <!-- Property details -->
+  
+  <div class="container-fluid mt-5" style="width: 100%;  >
+          <div class="row">
+              <div class="col-12 mx-auto my-3 property-details-box">
+                  <div class="row col-12 details-top-box">
+                      <h3 class="top-address col-md-6">{{ property_details.address }}</h3>
+                      <h3 class="details-price col-md-1">
+                          {% if property_details.listing_type == 'rent' %}
+                              <div>${{ property_details.price }} Per Month</div>
+                          {% else %}
+                              <div>${{ property_details.price }}</div>
+                          {% endif %}
+                      </h3>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-7 property-image-box">
+                          {% if property_details.image_link  %}
+                              <img src="{{ property_details.image_link }}" class="img-fluid details-property-img" alt="Property Image">
+                          {% else %}
+                              <img src="{{ url_for('static', filename='no-image.png') }}" class="img-fluid details-property-img" alt="Property Image">
+                          {% endif %}
+                      </div>
+                      <div class="col-md-4 offset-1">
+                          <div class="col-12">
+                              <div class="row justify-content-center bg-dark">
+                                  <div class="details-description-title mt-3">
+                                      <h2 class="text-white text-center">Property Summary</h2>
+                                  </div>
+                              </div>
+                              <div class="row col-12 summary-list-box mt-3">
+                                  <ul class="col-12 summary-list">
+                                      <li class="d-flex justify-content-between">
+                                          <strong>Listing Type:</strong>
+                                          {% if property_details.listing_type == 'rent' %}
+                                              <h5>For Rent</h5>
+                                          {% else %}
+                                              <h5>For Sale</h5>
+                                          {% endif %}
+                                      </li>
+                                      <li class="d-flex justify-content-between mt-2">
+                                          <strong>City:</strong>
+                                          <h5>{{ property_details.city }}</h5>
+                                      </li>
+                                      <li class="d-flex justify-content-between mt-2">
+                                          <strong><i class="fa-solid fa-house"></i> Property Size:</strong>
+                                          <h5>{{ property_details.property_size }} sqft</h5>
+                                      </li>
+                                      <li class="d-flex justify-content-between mt-2">
+                                          <strong ><i class="fa fa-bed"></i> Beds:</strong>
+                                          <h5>{{ property_details.num_bedrooms }}</h5>
+                                      </li>
+                                      <li class="d-flex justify-content-between mt-2">
+                                          <strong><i class="fa fa-bath"></i> Baths:</strong>
+                                          <h5>{{ property_details.num_bathrooms }}</h5>
+                                      </li>
+                                      <li class="d-flex justify-content-between py-1 mt-2">
+                                          <strong>Listing Status:</strong>
+                                          {% if property_details.listing_status == 'active' %}
+                                              <h5>Active</h5>
+                                          {% elif property_details.listing_status == 'pending' %}
+                                          <h5>Pending</h5>
+                                          {% elif property_details.listing_status == 'rented' %}
+                                          <h5>Rented</h5>
+                                          {% else %}
+                                              <h5>Sold</h5>
+                                          {% endif %}
+                                      </li>
+                                      <li class="d-flex justify-content-between py-1 mt-2">
+                                          <strong>Agent:</strong>
+                                          <h5>{{ property_details.agent.full_name }}</h5>
+                                      </li>
+                                  </ul>
+                              </div>
+                            <div class="row justify-content-center bg-dark">
+                                <div class="details-description-title mt-3">
+                                    <h2 class="text-white text-center"></h2>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+  </div>
+
+  <div class="container-fluid" >
+    <div class="row">
+      <div class="container col-md-6 mt-5" style="border: 3px solid whitesmoke;">
+          <div class="row details-description-title bg-dark">
+              <h2 class="text-center text-white">Property Description</h2>
+          </div>
+          <div class="property-description mb-3 mt-4" >
+              <h5 class="mt-2">{{ property_details.description }}.</h5>
+          </div>
+      </div>
+
+      <div class="container col-md-5 mt-5">
+          <div class="col-9 offset-3">
+              <h3 class="text-center">Agent</h3>
+              <br>
+              <div class="item">
+                  <div class="pad15">
+                      <a href="{{ url_for('main.agent_details', agent_id=property_details.agent.id) }}">
+                        <img src="{{ url_for('static', filename='profile_pics/' + property_details.agent.profile_pic) }}" class="card-img-top rounded-0" alt="Agent Image" style="max-width: 100%; height: auto;">
+                      </a>
+                      <h5 class="mt-3 text-center">{{ property_details.agent.full_name }}</h5>
+                      <p style="text-align: left;">
+                          <span onclick="window.location.href='mailto:{{ property_details.agent.email }}';" style="cursor:pointer;"><i class="fas fa-envelope"></i> Email Me</span>
+                      </p>
+                      <p style="text-align: left;">
+                          <span onclick="window.location.href='tel:{{ property_details.agent.phone_number }}';" style="cursor:pointer;"><i class="fas fa-phone"></i> {{ property_details.agent.phone_number }}</span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </div>
+  </div>
+  
+  
+  <!-- Contact Form -->
+  <div class="container">
+    <h2 class="text-center mt-5">Contact Us</h2>
+    <p class="text-center">Our team will contact you shortly</p>
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="form_box text-center">
+          <h4>Contact Form</h4>
+          <form method="post" action="{{ url_for('main.property_details',property_id=property_details.id) }}">
+            <div class="row">
+              <div class="input_box col-6">
+                <input type="text" name="first_name" class="form-control" placeholder="Enter Your First Name" required>
+
+              </div>
+
+              <div class="input_box col-6">
+                <input type="text" name="last_name" class="form-control" placeholder="Enter Your Last Name" required>
+
+              </div>
+
+              <div class="input_box col-12">
+                <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
+
+              </div>
+
+              <div class="input_box col-12">
+                <input type="tel" name="phone" class="form-control" placeholder="Enter Your Phone" required>
+
+              </div>
+
+              <div class="input_box col-8">
+                <input type="address" name="address" class="form-control" placeholder="Enter Your Address" required>
+              </div>
+
+              <div class="input_box col-4">
+                <input type="text" name="zip_code" class="form-control" placeholder="Enter Your Zip Code" required>
+              </div>
+
+              <div class="input_box col-12">
+                <textarea name="message" class="form-control" placeholder="Write your message" required></textarea>
+              </div>
+
+             <div class="col-4 offset-4">
+               <button type="submit" class="btn btn-dark">Send Message</button>
+             </div>
+
+            </div>
+          </form>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

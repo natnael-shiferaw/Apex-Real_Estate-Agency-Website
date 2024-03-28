@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800& display=swap');
+
+*{
+  font-family: 'Monserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-padding{
+  padding: 100px 0;
+}
+
+.w-100-height {
+  height: 90vh;
+  width: 100%;
+}
+
+.carousel-item {
+  min-height: 300px;
+}
+
+.carousel-caption{
+  text-align: left;
+  margin-bottom: 200px;
+  z-index: 2;
+}
+
+#carousel_for_buy.unique-carousel .carousel-caption {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.carousel-caption h5 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 60px;
+  text-align: left;
+}
+
+.carousel-caption p {
+  width: 60%;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.arrow-icon {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.bg-footer a {
+  text-decoration:none;
+  color: #aeaeae;
+}
+
+/* for send message for contact */
+.btnf{
+  background-color: black;
+  color: white;
+  height:45px;
+  width: 200px;
+  outline: none;
+  border: none;
+  display: inline-block;
+}
+
+.form_box{
+  background: #ffffff;
+  padding: 30px;
+  border: 1px solid #666;
+  border-radius: 28px;
+}
+.form_box h4{
+  color: black;
+  font-weight: 600;
+  padding-bottom: 25px;
+}
+
+.input_box{
+  padding: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.input_box input{
+  font-size: 15px;
+  padding: 0px 10px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #999;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: .5px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.input_box input:placeholder{
+  visibility: hidden;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: .5px;
+}
+
+.input_box input:focus{
+  outline: none;
+  border: 1px solid #2b6dd6;
+  color: #222;
+}
+.input_box input:focus::placeholder{
+  visibility: visible;
+  color: #666;
+}
+
+.input_box label{
+  color: #555;
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events:none;
+  left:15px
+  top:14px;
+  letter-spacing: .5px;
+  padding: 0px 5px;
+  transition: .2s;
+  background: #ffffff;
+}
+.input_box input:focus ~ label,
+.input_box input:valid ~ label{
+  top: -5px;
+  font-size: 12px;
+  color: #1569b2;
+  font-weight: 500; 
+}
+
+.input_box textarea{
+  font-size: 15px;
+  padding: 0px 10px;
+  display: block;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #999;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: .5px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.input_box textarea:placeholder{
+  visibility: hidden;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: .5px;
+}
+
+.input_box textarea:focus ~ label,
+.input_box textarea:valid ~ label{
+  top: -5px;
+  font-size: 12px;
+  color: #1569b2;
+  font-weight: 500; 
+}
+
+/* End of Form */
+
+/* About us page*/
+
+.mvv-container{
+  max-width:90%;
+  margin: 50px auto 0;
+}
+.mvv-container .mvv-block{
+  margin-bottom: 50px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.mvv-container .mvv-block .image{
+  flex: 0 0 auto;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+  line-height: 0;
+}
+.mvv-container .mvv-block .image img{
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+  transition: .3s;
+  transform: scale(1);
+}
+.mvv-container .mvv-block .image:hover img{
+  transform: scale(1.05);
+}
+
+.mvv-container .mvv-block .content{
+  flex: 0 0 auto;
+  width: calc(100% - 400px);
+  box-sizing: border-box;
+  align-self: center;
+}
+.mvv-container .mvv-block .content h3{
+    font-weight: 700;
+  font-size: 30px;
+  color: blue;
+  margin-bottom: 10px;
+}
+
+
+@media screen and (min-width: 1024px){
+  .mvv-container .mvv-block:nth-child(odd) .image{
+    order: 1;
+  }
+  .mvv-container .mvv-block:nth-child(even) .image{
+    order: 2;
+  }
+  .mvv-container .mvv-block:nth-child(odd) .content{
+    order: 2;
+    padding-left: 30px;
+  }
+  .mvv-container .mvv-block:nth-child(even) .content{
+    order: 1;
+    padding-right: 30px;
+  }
+  
+}
+
+/*End of About page*/
+
+/* carousel for Agents */
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+.MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+    .MultiCarousel .MultiCarousel-inner .item { float: left;}
+    .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+.MultiCarousel .leftLst { left:0; }
+.MultiCarousel .rightLst { right:0; }
+
+    .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+
+.pad15 img{
+  transform: scale(1);
+  transition: .3s;
+}
+.pad15:hover img{
+  transform: scale(1.05);
+}
+
+/* End of carousel for Agents */

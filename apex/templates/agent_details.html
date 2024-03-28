@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- Hero section -->
+  <div id="carouselExampleAutoplaying" class="carousel slide unique-carousel">
+    <div class="carousel-inner unique-carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://ideogram.ai/api/images/direct/WmaEFLspS5ukWGrKE4LmRQ.jpg" class="d-block w-100-height unique-carousel-image" alt="image">
+        <div class="carousel-caption carousell unique-carousel-caption ">
+          <h5 class="text-center">Agent</h5>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <!-- Agent Details -->
+  <section class="mt-5">
+    <div class="row">
+      <div class="col-md-7 property-image-box">
+          <img src="{{ url_for('static', filename='profile_pics/' + agent_details.profile_pic) }}" class="card-img-top rounded-0" alt="Agent Image" style="max-width: 68%; height: auto; margin-left: 70px;">
+      </div>
+      <div class="col-md-4 offset-1">
+          <div class="col-12">
+              <div class="row justify-content-center bg-dark">
+                  <div class="details-description-title mt-3">
+                      <h2 class="text-white text-center">Agent's Detail</h2>
+                  </div>
+              </div>
+              <div class="row col-12 summary-list-box mt-5">
+                  <ul class="col-12 summary-list">
+                      <li class="d-flex justify-content-between">
+                          <strong>Full Name:</strong>
+                              <h5>{{agent_details.full_name}}</h5>
+                      </li>
+                      <li class="d-flex justify-content-between mt-2">
+                          <strong><i class="fa fa-envelope"></i> Email:</strong>
+                          <h5 onclick="window.location.href='mailto:{{ agent_details.email }}';" style="cursor:pointer;">{{ agent_details.email }}</h5>
+                      </li>
+                      <li class="d-flex justify-content-between mt-2">
+                          <strong ><i class="fa fa-phone"></i> Phone:</strong>
+                          <h5 onclick="window.location.href='tel:{{ agent_details.phone_number }}';" style="cursor:pointer;">{{ agent_details.phone_number }}</h5>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section>
+    <div class="container-fluid" >
+      <div class="row">
+        <div class="container col-md-6 mt-5" style="border: 3px solid whitesmoke;">
+            <div class="row details-description-title bg-dark">
+                <h2 class="text-center text-white">{{ agent_details.full_name }}</h2>
+            </div>
+            <div class="property-description mb-3 mt-4" >
+                <h5 class="mt-2">{{ agent_details.description }}.</h5>
+            </div>
+        </div>
+
+        <div class="container col-md-5" style="border: 3px solid whitesmoke; margin-top: -5%;">
+          <h2 class="text-center">Ask a question</h2>
+          <div class="form_box text-center">
+            <form method="post" action="{{ url_for('main.agent_details', agent_id=agent_details.id) }}">
+              <div class="row">
+                <div class="input_box col-12">
+                  <input type="text" name="full_name" class="form-control" placeholder="Enter Your Full Name" required>
+
+                </div>
+
+                <div class="input_box col-12">
+                  <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
+
+                </div>
+
+                <div class="input_box col-12">
+                  <input type="tel" name="phone" class="form-control" placeholder="Enter Your Phone" required>
+
+                </div>
+                <div class="input_box col-12">
+                    <textarea name="message" class="form-control" placeholder="Write your message" required></textarea>
+                  </div>
+
+                 <div class="col-4 offset-4">
+                   <button type="submit" class="btn btn-dark">Send Message</button>
+                 </div>
+            </form>
+          
+        </div>
+      </div>
+        </div>
+      </div>
+  </section>
+
+{% endblock %}

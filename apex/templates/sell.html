@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <!-- Hero section -->
+  <div id="carouselExampleAutoplaying" class="carousel slide unique-carousel">
+    <div class="carousel-inner unique-carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename='home6.jpg') }}" class="d-block w-100-height unique-carousel-image" alt="image">
+        <div class="carousel-caption carousell unique-carousel-caption ">
+
+          <h5 class="text-center">Sell Your Property</h5>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <section class="about section-padding" style="margin-top: 40px;">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 col-12">
+          <div class="about-img mx-auto">
+            <img src="https://ideogram.ai/api/images/direct/GeifS6jyRZ6IiT1iTfKxjQ.jpg" alt="about-img" class="img-fluid mt-4">
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-12 col-12 ps-lg-5 mt-md-5" style="margin-top: 40px;">
+          <div class="about-text">
+            <h2>Ready to Sell?</h2>
+            <p>Are you considering selling your property? Look no further! At Apex Real Estate, we specialize in helping homeowners like you achieve their goals. Whether you're upsizing, downsizing, relocating, or simply ready for a change, our experienced team is here to guide you through every step of the selling process.</p>
+            <p>With our team of experienced real estate professionals, you can expect personalized service tailored to your unique needs and goals. Whether you're selling a family home, an investment property, or commercial real estate, we're committed to helping you achieve the best possible outcome.</p>
+            <p>From pricing your property competitively to marketing it effectively to potential buyers, we'll handle every aspect of the selling process with care and attention to detail. Our goal is to maximize the value of your property and ensure a successful sale that meets your timeline and financial objectives.</p>
+            <p>Contact us today to schedule a consultation and learn more about how we can assist you in selling your property. We look forward to working with you!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <!-- Contact Form -->
+    <div class="container">
+      <h2 class="text-center mt-5">Contact Us</h2>
+      <p class="text-center">Our team will contact you shortly</p>
+      <h2 class="mt-5">Contact Details</h2>
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="form_box text-center">
+            <form method="post" action="{{ url_for('main.sell') }}">
+              <div class="row">
+                <div class="input_box col-6">
+                  <input type="text" name="first_name" class="form-control" placeholder="Enter Your First Name" required>
+
+                </div>
+
+                <div class="input_box col-6">
+                  <input type="text" name="last_name" class="form-control" placeholder="Enter Your Last Name" required>
+
+                </div>
+
+                <div class="input_box col-12">
+                  <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
+
+                </div>
+
+                <div class="input_box col-12">
+                  <input type="tel" name="phone" class="form-control" placeholder="Enter Your Phone" required>
+
+                </div>
+
+                <div class="input_box col-8">
+                  <input type="address" name="address" class="form-control" placeholder="Enter Your Address" required>
+                </div>
+
+                <div class="input_box col-4">
+                  <input type="text" name="zip_code" class="form-control" placeholder="Enter Your Zip Code" required>
+                </div>
+
+
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+
+              <!-- property details form -->
+              <div class="container">
+              <h2 class="mt-5">Property Details</h2>
+              <div class="row mt-5">
+              <div class="col-12">
+              <div class="form_box text-center">
+
+              <div class="row">
+                <div class="input_box col-12">
+                  <input type="text" name="property_address" class="form-control" placeholder="Enter Property Address" required>
+                </div>
+
+                <div class="input_box col-3">
+                  <label for="bathrooms">Bathrooms</label>
+                  <select id="bathrooms" name="bathrooms" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                  </select>
+                </div>
+
+                <div class="input_box col-3 offset-6">
+                  <label for="bedrooms">Bedrooms</label>
+                  <select id="bedrooms" name="bedrooms" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                  </select>
+                </div>
+
+
+                <div class="input_box col-12">
+                  <textarea name="property_message" class="form-control" placeholder="Additional Information" required></textarea>
+                </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+
+              <div class="col-12 offset-3">
+              <button type="submit" class="btn btn-dark btn-block mt-3">Send Message</button>
+              </div>
+            </form>
+
+          
+  </section>
+
+
+{% endblock %}

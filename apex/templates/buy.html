@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block custom_style %}<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">{% endblock %}
+
+{% block content %}
+
+  <!-- Hero section -->
+  <div id="carousel_for_buy" class="carousel slide unique-carousel">
+    <div class="carousel-inner unique-carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://ideogram.ai/api/images/direct/WmaEFLspS5ukWGrKE4LmRQ.jpg" class="d-block w-100-height unique-carousel-image" alt="image">
+        <div class="carousel-caption carousell unique-carousel-caption ">
+          
+          <h5>Properties For Sale</h5>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <!-- For Sale Properties -->
+  <section class="col-12">
+  <div class="container">
+      <div class="row justify-content-between align-items-center">
+          <h2 class="mt-4 text-center">For Sale</h2>
+          <h3 class="mt-4"> {{total_properties_for_sale}} Listings </h3>
+          
+      </div>
+
+      <div class="row col-12 mx-auto px-0 px-md-auto mt-4" style="margin-top: 5px;">
+          {% if for_sale %}
+              {% for property in for_sale %}
+                  {% include "partials/home_cards.html" %}
+              {% endfor %}
+          {% else %}
+              {% include "partials/no_results.html" %}
+          {% endif %}
+      </div>
+  </div>
+  </section>
+
+{% endblock %}
