@@ -12,6 +12,11 @@
     </div>
   </div>
 
+  <div class="mt-5 text-center">
+    <h4>Meet Our Dedicated Agent</h4>
+    <h6>At Apex Real Estate, we pride ourselves on our team of dedicated and experienced agents who are committed to providing exceptional service and achieving outstanding results for our clients. Our agents are experts in the local market and are passionate about helping you navigate the complexities of buying, selling, or renting property.</h6>
+  </div>
+
   <!-- Agent Details -->
   <section class="mt-5">
     <div class="row">
@@ -49,15 +54,15 @@
     <div class="container-fluid" >
       <div class="row">
         <div class="container col-md-6 mt-5" style="border: 3px solid whitesmoke;">
-            <div class="row details-description-title bg-dark">
-                <h2 class="text-center text-white">{{ agent_details.full_name }}</h2>
+            <div class="row details-description-title " style="background-color: whitesmoke;">
+                <h2 class="text-center">{{ agent_details.full_name }}</h2>
             </div>
             <div class="property-description mb-3 mt-4" >
                 <h5 class="mt-2">{{ agent_details.description }}.</h5>
             </div>
         </div>
 
-        <div class="container col-md-5" style="border: 3px solid whitesmoke; margin-top: -5%;">
+        <div class="container col-md-5" style="border: 3px solid whitesmoke; margin-top: -2%;">
           <h2 class="text-center">Ask a question</h2>
           <div class="form_box text-center">
             <form method="post" action="{{ url_for('main.agent_details', agent_id=agent_details.id) }}">
