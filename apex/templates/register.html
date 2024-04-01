@@ -1,6 +1,6 @@
 {% extends "base_agent.html" %}
 {% block content %}
-    <div class="container-fluid col-8 mb-4 add-property-container">
+    <div class="container-fluid col-8 mb-4" style="margin-top: -5%;">
         <!-- FLASH MESSAGES -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -104,9 +104,9 @@
                     </form>
                 </div>
                 <div class="border-top pt-3">
-                    <small class="text-muted">
+                    <h6 class="text-muted">
                         Already Have An Account? <a class="ml-2" href="{{ url_for('agents.login') }}">Sign In</a>
-                    </small>
+                    </h6>
                 </div>
             </div>
         </div>

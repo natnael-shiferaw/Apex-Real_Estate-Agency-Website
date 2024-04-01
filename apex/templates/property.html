@@ -3,7 +3,7 @@
 {% block content %}
 
 <section class="col-12">
-    <div class="container">
+    <div class="container-fluid" style="margin-top: -5%;">
         <!-- FLASH MESSAGES -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -15,7 +15,7 @@
         {% endif %}
         {% endwith %}
         <div class="row">
-            <div class="col-12 col-lg-9 mx-auto my-3 property-details-box">
+            <div class="col-12 col-lg-12 mx-auto my-3 " style="background-color: whitesmoke;">
                 <div class="row col-12 details-top-box">
                     <span class="top-address col-md-6">{{ property_details.address }}</span>
                     <span class="details-price col-md-6">

@@ -66,19 +66,19 @@ def property_details(property_id):
                     sender= 'noreply@demo.com',
                     recipients=[EMAIL_USER])
       msg.body = f"""
-      First Name: {first_name}
-      Last Name: {last_name}
-      Email: {email}
-      Phone: {phone}
+      <h3>First Name:</h3> <h4>{first_name}</h4>
+      <h3>Last Name:</h3> <h4>{last_name}</h4>
+      <h3>Email:</h3> <h4>{email}</h4>
+      <h3>Phone: {phone}
       address: {address}
       zip_code: {zip_code}
       Message:
-        {message}
+      {message}
       """
       mail.send(msg)
 
       flash('Your message has been sent successfully!', 'success')
-      return redirect(url_for('main.property_details', property_id=property_details.id))
+      return redirect(url_for('main.propery_details', property_id=property_id))
 
 
     return render_template('home_property_details.html', property_details=property_details, title='Property Details')
@@ -160,7 +160,7 @@ def agent_details(agent_id):
       mail.send(msg)
 
       flash('Your message has been sent successfully!', 'success')
-      return redirect(url_for('main.agent_details', agent_id=agent_details.id))
+      return redirect(url_for('main.agent_details', agent_id=agent_id))
   
     return render_template('agent_details.html', agent_details=agent_details, title='Agent Details')
 
