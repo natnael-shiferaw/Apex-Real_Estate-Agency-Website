@@ -133,7 +133,6 @@ ul {
 }
 
 .navbar-logo {
-    background-image: url('../img/logo.png');
     background-repeat: no-repeat;
     background-size: contain;
     padding: 3rem 3rem 0 3rem;

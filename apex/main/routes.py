@@ -3,7 +3,6 @@ from apex.models import Property, Agent
 from apex import mail
 from flask_mail import Message
 import os
-from apex.config import Config
 
 main = Blueprint('main', __name__)
 
@@ -20,21 +19,27 @@ def home():
 
 @main.route("/buy")
 def buy():
-    for_sale = Property.query.filter_by(listing_type='sale').all()
+    # Pagination Query to get the properties for sale
+    page = request.args.get('page', 1, type=int)
+    for_sale = Property.query.filter_by(listing_type='sale').paginate(page=page, per_page=5)
     # Query to get the total number of properties for sale
     total_properties_for_sale = Property.query.filter_by(listing_type='sale').count()
     return render_template('buy.html', for_sale=for_sale, total_properties_for_sale=total_properties_for_sale, title='Buy')
 
 @main.route("/rent")
 def rent():
-    for_rent = Property.query.filter_by(listing_type='rent').all()
+    # Pagination Query to get the properties for rent
+    page = request.args.get('page', 1, type=int)
+    for_rent = Property.query.filter_by(listing_type='rent').paginate(page=page, per_page=5)
     # Query to get the total number of properties for rent
     total_properties_for_rent = Property.query.filter_by(listing_type='rent').count()
     return render_template('rent.html', for_rent=for_rent, total_properties_for_rent=total_properties_for_rent, title='Rent')
 
 @main.route("/listings")
 def listings():
-    all_properties = Property.query.all()
+    # pagination Query
+    page = request.args.get('page', 1, type=int)
+    all_properties = Property.query.paginate(page=page, per_page=5)
     # Query to get the total number of properties for rent
     total_properties = Property.query.count()
     return render_template('listings.html', all_properties=all_properties, total_properties=total_properties, title='Listings')
@@ -73,7 +78,7 @@ def property_details(property_id):
       mail.send(msg)
 
       flash('Your message has been sent successfully!', 'success')
-      return redirect(url_for('main.home'))
+      return redirect(url_for('main.propery_details', property_id=property_id))
 
 
     return render_template('home_property_details.html', property_details=property_details, title='Property Details')

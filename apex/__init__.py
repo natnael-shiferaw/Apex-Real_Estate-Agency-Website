@@ -24,9 +24,11 @@ def create_app(config_class=Config):
 
   from apex.main.routes import main
   from apex.agents.routes import agents
+  from apex.api.routes import api
 
   app.register_blueprint(main)
   app.register_blueprint(agents)
+  app.register_blueprint(api)
 
   # Create database
   with app.app_context():

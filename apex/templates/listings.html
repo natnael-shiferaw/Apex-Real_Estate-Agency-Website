@@ -27,7 +27,7 @@
 
       <div class="row col-12 mx-auto px-0 px-md-auto mt-4" style="margin-top: 5px;">
           {% if all_properties %}
-              {% for property in all_properties %}
+              {% for property in all_properties.items %}
                   {% include "partials/home_cards.html" %}
               {% endfor %}
           {% else %}
@@ -35,6 +35,23 @@
           {% endif %}
       </div>
   </div>
+
+  <div class="text-center">
+    {% for page_num in all_properties.iter_pages(left_edge=1,   right_edge=1,left_current=1, right_current=2) %}
+        {% if page_num %}
+            {% if all_properties.page == page_num %}
+                <a class="btn btn-info mb-4" href="{{ url_for('main.listings', page=page_num) }}">{{ page_num }}</a>
+            {% else %}
+              <a class="btn btn-outline-info mb-4" href="{{ url_for('main.listings', page=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+        {% else %}
+            ...
+        {% endif %}
+
+    {% endfor %}
+  </div>
+  
+  
   </section>
 
 {% endblock %}

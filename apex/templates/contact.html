@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+
   <!-- FLASH MESSAGES -->
   {% with messages = get_flashed_messages() %}
   {% if messages %}
@@ -10,16 +11,6 @@
   </div>
   {% endif %}
   {% endwith %}
-<!-- FLASH MESSAGES -->
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<div class="alert alert-success d-flex justify-content-center">
-    {% for message in messages %}
-    <span>{{ message }}</span>
-    {% endfor %}
-</div>
-{% endif %}
-{% endwith %}
 
   <!-- Hero section -->
   <div id="carouselExampleAutoplaying" class="carousel slide unique-carousel">
