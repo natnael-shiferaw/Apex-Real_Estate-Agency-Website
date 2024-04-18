@@ -152,6 +152,7 @@ pip install -r requirements.txt
 
 - **After installing the required modules, you will need to set the values for the configurations used in the `config.py` file within the apex directory. These values would be set as environment variables.**
 ![Image for config](https://i.imgur.com/bJNd4go.png)
+
 *For the configurations, you will set the environment variables with the values you would be using.*
 
 1. `SECRET_KEY`: This secret key would be used for secure sessions and you will need to set your own secret key.
