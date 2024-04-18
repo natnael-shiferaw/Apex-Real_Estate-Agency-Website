@@ -33,7 +33,7 @@ This Route displays properties available for rent, enabling users to search for 
 
 This Route provides information and resources for users interested in selling their properties. This page will include guidance on the selling process, benefits of listing with the agency, and a contact form for sellers to get in touch with agents.
 
-![Image for Sell Route](https://i.imgur.com/jZFEl86.png)
+![Image for Sell Route](https://i.imgur.com/OHgvCyK.png)
 
 ---
 
