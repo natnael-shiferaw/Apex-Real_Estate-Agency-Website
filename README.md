@@ -12,14 +12,15 @@
 
  `This project mainly includes two interfaces: `
 
- **1. Client-facing Interface**
-     - This is the interface for the users(Buyers, Renters, Landlords and Sellers.
-     - In this interface the users can browse properties, view listings, communicate with the real estate agents and contact the agency for inquiries and transactions.
-     - In this interface users can easily filter property listings to view only those available for sale or rent, streamlining their search process and ensuring they find properties that        match their needs and preferences.
+## 1. Client-facing Interface
+
+- This is the interface for the users(Buyers, Renters, Landlords and Sellers.
+- In this interface the users can browse properties, view listings, communicate with the real estate agents and contact the agency for inquiries and transactions.
+- In this interface users can easily filter property listings to view only those available for sale or rent, streamlining their search process and ensuring they find properties that        match their needs and preferences.
 
 
 ---
-# Routes
+## Routes 
 
 ## Buy
 
