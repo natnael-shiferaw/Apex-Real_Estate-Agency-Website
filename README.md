@@ -10,6 +10,14 @@
 
  The project aims to develop a comprehensive web application for a real estate agency, catering to the diverse needs of buyers, sellers, landlords, and agents in the property market. The application provides users with a seamless platform to browse properties for sale or rent, while also offering sellers and landlords the ability to easily connect with the agency to list their properties. Additionally, the project includes a robust dashboard for real estate agents, empowering them to manage properties efficiently through CRUD operations, as well as providing a streamlined registration and login process for agents.
 
+ `This project mainly includes two interfaces: `
+
+ **1. Client-facing Interface**
+     - This is the interface for the users(Buyers, Renters, Landlords and Sellers.
+     - In this interface the users can browse properties, view listings, communicate with the real estate agents and contact the agency for inquiries and transactions.
+     - In this interface users can easily filter property listings to view only those available for sale or rent, streamlining their search process and ensuring they find properties that        match their needs and preferences.
+
+
 ---
 # Routes
 
@@ -36,5 +44,9 @@ This Route provides information and resources for users interested in selling th
 ![Image for Sell Route](https://i.imgur.com/OHgvCyK.png)
 
 ---
+
+## Agents Dashboard
+
+
 
 
