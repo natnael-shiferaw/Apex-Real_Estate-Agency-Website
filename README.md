@@ -48,7 +48,7 @@ This Route provides information and resources for users interested in selling th
 
 ## 2. Agents Dashboard Interface
 
-This interface is located at (**/admin/agents **) route. For instance in the deployed site, It's found at https://apex-real-estate-agency-website-m2z3.onrender.com/admin/agents.
+This interface is located at (**/admin/agents**) route. For instance in the deployed site, It's found at https://apex-real-estate-agency-website-m2z3.onrender.com/admin/agents.
 
 - Agents can easily register and create accounts to gain access to the dashboard, streamlining the onboarding process and ensuring seamless interaction with the system.
 - The dashboard provides agents with a secure login feature, allowing them to access their accounts and manage property listings with ease.
@@ -78,12 +78,12 @@ This interface is located at (**/admin/agents **) route. For instance in the dep
 
 ---
 
-```
-After the Agent is logged in, The navigation links would be changed inorder to allow the agents to perform their operations. It would be changed to this
+
+**After the Agent is logged in, The navigation links would be changed inorder to allow the agents to perform their operations. It would be changed to this**
 
 ![Image for navigation change](https://i.imgur.com/1V2zc2G.png) 
 
-```
+---
 
 
 
