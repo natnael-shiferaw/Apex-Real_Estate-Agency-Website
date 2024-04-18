@@ -20,7 +20,7 @@
 
 
 ---
-## Routes 
+## Routes for the client-facing Interface 
 
 ## Buy
 
@@ -46,8 +46,44 @@ This Route provides information and resources for users interested in selling th
 
 ---
 
-## Agents Dashboard
+## 2. Agents Dashboard Interface
 
+This interface is located at (**/admin/agents **) route. For instance in the deployed site, It's found at https://apex-real-estate-agency-website-m2z3.onrender.com/admin/agents.
+
+- Agents can easily register and create accounts to gain access to the dashboard, streamlining the onboarding process and ensuring seamless interaction with the system.
+- The dashboard provides agents with a secure login feature, allowing them to access their accounts and manage property listings with ease.
+- Agents have the ability to add new property listings, update existing details, and remove properties from the database as needed, ensuring accurate and up-to-date information for 
+ clients.
+- Additionally, agents can manage their profiles, ensuring that their contact information and other details are kept current.
+
+![Image for agents dashboard](https://i.imgur.com/EyfaTXn.png)
+
+---
+
+## Routes for Agents dashboard Interface
+
+## Create Account
+
+- In this route agents can create an account so they can manage the properties they are representing, add a property, update a property and delete it from the database.
+
+![Image for create account route](https://i.imgur.com/oO7atIk.png)
+
+---
+
+## Login
+
+- In this route agents can securely login to their account to manage their accounts and properties with ease.
+
+![Image for Login Route](https://i.imgur.com/E2JYlYq.png)
+
+---
+
+```
+After the Agent is logged in, The navigation links would be changed inorder to allow the agents to perform their operations. It would be changed to this
+
+![Image for navigation change](https://i.imgur.com/1V2zc2G.png) 
+
+```
 
 
 
