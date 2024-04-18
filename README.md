@@ -91,5 +91,13 @@ This interface is located at (**/admin/agents**) route. For instance in the depl
 
 ---
 
+## Add Property
+
+- This route allows agents to add new property listings to the database, providing fields to input details such as **address**, **price**, **size**, **bedrooms**, **bathrooms**, **amenities**, and **image**.
+
+![Image for add property route](https://i.imgur.com/51Oh5F1.png)
+
+---
+
 
 
