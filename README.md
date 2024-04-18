@@ -99,5 +99,79 @@ This interface is located at (**/admin/agents**) route. For instance in the depl
 
 ---
 
+## Profile
 
+- This route allows agents to manage their profile. Agents can change their profile picture, add description about them selves, change their password and delete their account.
 
+![Image for agents profile](https://i.imgur.com/rkRKLta.png)
+
+---
+
+## My ads
+
+- This route lists all the properties that are represented by the agent.
+
+![Image for my ads](https://i.imgur.com/77wh327.png)
+
+---
+
+## Property Details
+
+- This route shows all the details of a particular property including it's **image**, **Property description**, **price** and **Property summary**.
+
+![Image for property details](https://i.imgur.com/CsSYVJ9.png)
+
+---
+
+## Edit Property
+
+- This route allow the agents to edit the detials of the property in hand.
+
+![Image for edit property](https://i.imgur.com/qovJKeD.png)
+
+---
+
+## Delete Property
+
+- This route allow the agents to delete the property from the database.
+
+![Image for delete property](https://i.imgur.com/hHlUGUE.png)
+
+---
+
+## Technologies Used
+
+- **In this project, I've achieved the creation of a fully functional real estate web application that addresses the needs of both users and real estate professionals. The architecture of the application follows a client-server model, with the frontend built using HTML5, CSS3, JavaScript, and the Bootstrap framework, while the backend is powered by Python and the Flask framework. Data flows seamlessly between the client and server, allowing users to browse properties, contact the agency, and register/login as agents.**
+
+## Installation
+
+- **Inorder for this flask web application to work, you will need to install all the modules in `requirements.txt` file.**
+```
+pip install -r requirements.txt
+```
+
+- **After installing the required modules, you will need to set the values for the configurations used in the `config.py` file within the apex directory. These values would be set as environment variables.**
+![Image for config](https://i.imgur.com/bJNd4go.png)
+*For the configurations, you will set the environment variables with the values you would be using.*
+
+1. `SECRET_KEY`: This secret key would be used for secure sessions and you will need to set your own secret key.
+2. `SQLALCHEMY_DATABASE_URI`: represents the Uniform Resource Identifier (URI) used by SQLAlchemy to connect to a database. It contains the necessary information to establish a connection to the database, including the database dialect, username, password, host, port, and database name.
+   Me Personally, I have used a sqlite database used locally which is located in the directory named `instance` and within this directory a file named `realestate.db`. Here is the value    for the environment variable. ```sqlite:///realestate.db```
+3. `EMAIL_USER`: This is the email address for your real estate agency.
+4. `EMAIL_PASSWORD`: This is the password for the email address you provided.
+
+**You can change the values for `MAIL_SERVER`, `MAIL_PORT` and `MAIL_USE_TLS`, if you are using a different email provider other than gmail.**
+
+---
+
+### Deployed Website
+
+- Here is the link for the deployed site. [click here](https://apex-real-estate-agency-website-m2z3.onrender.com)
+
+### Landing Page
+
+- Here is the link for the landing page. [click here](https://apex-realestate-landing-page.my.canva.site/apex-real-estate-website)
+
+### [Linkedin](www.linkedin.com/in/natnaelshiferaw)
+
+---
