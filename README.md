@@ -79,7 +79,13 @@ This interface is located at (**/admin/agents**) route. For instance in the depl
 ---
 
 
-**After the Agent is logged in, The navigation links would be changed inorder to allow the agents to perform their operations. It would be changed to this**
+**After the Agent is logged in, The navigation links would be changed inorder to allow the agents to perform their operations.**
+
+- **User not logged in:**
+
+![Imgae for user not logged in](https://i.imgur.com/LfXOFRr.png)
+
+- **User logged in:**
 
 ![Image for navigation change](https://i.imgur.com/1V2zc2G.png) 
 
