@@ -157,11 +157,19 @@ pip install -r requirements.txt
 
 1. `SECRET_KEY`: This secret key would be used for secure sessions and you will need to set your own secret key.
 2. `SQLALCHEMY_DATABASE_URI`: represents the Uniform Resource Identifier (URI) used by SQLAlchemy to connect to a database. It contains the necessary information to establish a connection to the database, including the database dialect, username, password, host, port, and database name.
-   Me Personally, I have used a sqlite database used locally which is located in the directory named `instance` and within this directory a file named `realestate.db`. Here is the value    for the environment variable. ```sqlite:///realestate.db```
-3. `EMAIL_USER`: This is the email address for your real estate agency.
-4. `EMAIL_PASSWORD`: This is the password for the email address you provided.
+   Me Personally, I have used a sqlite database used locally which is located in the directory named `instance` and within this directory a file named `realestate.db`. Here is the value    for the environment variable.
+   ```
+   sqlite:///realestate.db
+   ```
+4. `EMAIL_USER`: This is the email address for your real estate agency.
+5. `EMAIL_PASSWORD`: This is the password for the email address you provided.
 
 **You can change the values for `MAIL_SERVER`, `MAIL_PORT` and `MAIL_USE_TLS`, if you are using a different email provider other than gmail.**
+
+- After finishing the above, to run it locally you can use the following command.
+```
+python app.py
+```
 
 ---
 
